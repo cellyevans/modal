@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./background.jpg) no-repeat center center/cover;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input,
+input:focus,
+button,
+button:focus,
+textarea,
+textarea:focus {
+    border: none;
+    outline: none;
+}
+
+.welcome {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.modal-open {
+    border: none;
+    outline: none;
+    background-color: #fba078;
+    color: #333;
+    padding: .5rem 1.5rem;
+    border-radius: 3px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 500ms ease-out;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+.modal .modal-content {
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    transform: rotate(-180deg);
+    transition: .6s all ease-in;
+}
+
+.modal .modal-content.active {
+    transform: rotate(0deg);
+}
+
+.close {
+    position: absolute;
+    font-size: 1.5rem;
+    display: block;
+    top: 0;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.modal-content .form-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-heading .logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo-box .logo-wrapper {
+    width: 6rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+}
+
+.logo-wrapper img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center center;
+}
+
+.logo-box .description {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.form-heading .terms {
+    width: 90%;
+    margin: 2rem 0;
+    text-align: center;
+    line-height: 1.2rem;
+}
+
+.modal-content .form-body {
+    width: 100%;
+    margin-top: -1rem;
+}
+
+.form-body .form-control {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.form-control .form-input {
+    display: block;
+    width: 100%;
+    padding: .5rem 1.5rem;
+    font-size: 1.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+}
+
+.form-control textarea {
+    resize: none;
+    width: 100%;
+    padding: 1rem 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    font-size: 1.2rem;
+}
+
+.form-body .form-submit {
+    margin: 1rem 0 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-submit input {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: .6rem 1.2rem;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}

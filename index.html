@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact form</title>
+  </head>
+  <body>
+    <section class="welcome">
+      <h2 class="title">Simple contact form</h2>
+      <button class="modal-open">Contact Form</button>
+    </section>
+    <section class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="form-heading">
+          <figure class="logo-box">
+            <div class="logo-wrapper">
+              <img src="./logo-form.png" alt="site logo" />
+            </div>
+            <figcaption class="description">Get in touch!</figcaption>
+          </figure>
+          <p class="terms">
+            Get in touch with us and we'll be with you as soon as possible!
+          </p>
+        </div>
+        <form class="form-body">
+          <div class="form-control">
+            <input type="text" placeholder="Your name" class="form-input" />
+          </div>
+          <div class="form-control">
+            <input type="email" placeholder="Your Email" class="form-input" />
+          </div>
+          <div class="form-control">
+            <input type="text" placeholder="Your Phone" class="form-input" />
+          </div>
+          <div class="form-control">
+            <textarea name="message" cols="30" rows="5" placeholder="Your message"></textarea>
+          </div>
+          <div class="form-submit"><input type="submit" value="Send" /></div>
+        </form>
+      </div>
+    </section>
+    <script src="./app.js"></script>
+  </body>
+</html>
